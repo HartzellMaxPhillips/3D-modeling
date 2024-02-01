@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Chair.ma
-//Last modified: Wed, Jan 31, 2024 11:01:26 PM
+//Last modified: Wed, Jan 31, 2024 11:21:49 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "CEE58948-4794-D3DC-8510-67878641A279";
+fileInfo "UUID" "E10E0A35-4B67-F5D6-8FDD-D18FE4B8FB46";
 createNode transform -s -n "persp";
 	rename -uid "05512E60-43C8-697C-BCCC-CCB0734BDCA1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.52954116878269064 6.8304542052337327 6.2477878837244747 ;
-	setAttr ".r" -type "double3" -33.938352727389251 -1435.7999999999201 0 ;
+	setAttr ".t" -type "double3" -0.5821605933771008 6.1208927474414958 6.2869572821018567 ;
+	setAttr ".r" -type "double3" -30.938352727393422 -1445.7999999998704 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "85602C48-420C-E6DB-1477-B2A3BAF5F3BF";
 	setAttr -k off ".v" no;
@@ -43,7 +43,7 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
 	setAttr ".coi" 32.811679790026247;
-	setAttr ".ow" 0.49672257306839424;
+	setAttr ".ow" 9.0335092934929264;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -53,7 +53,7 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "36FD67B4-432A-DDC3-F1A0-4CBF340B85BF";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.2066898515696878 0.82675940627875044 32.811679790026247 ;
+	setAttr ".t" -type "double3" 0.19734536903293448 1.9761307582993373 32.811679790026247 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "8D400C27-4D75-3410-C772-C28C20BAC426";
 	setAttr -k off ".v" no;
@@ -62,7 +62,7 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
 	setAttr ".coi" 32.811679790026247;
-	setAttr ".ow" 10.42844251101606;
+	setAttr ".ow" 8.8772584099151022;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -72,7 +72,7 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "2BC73002-4022-BBF8-B884-90A7A4E5E61E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 32.811679790026247 0 0 ;
+	setAttr ".t" -type "double3" 32.811679790026247 1.8808849733386135 -0.03816288351701487 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "E04CA711-4FF4-C93B-E953-9A8172A39617";
@@ -82,7 +82,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
 	setAttr ".coi" 32.811679790026247;
-	setAttr ".ow" 0.98425196850393704;
+	setAttr ".ow" 7.8615540045051615;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -169,7 +169,7 @@ createNode transform -n "ChairBackStrut1" -p "Chair";
 	rename -uid "48570043-4A65-3BA2-9B51-92A0D856DB16";
 	setAttr ".t" -type "double3" -0.36729192940750038 1.9176097263194249 -1.1397850181839995 ;
 	setAttr ".s" -type "double3" 14.926744011120816 14.926744011120816 14.926744011120816 ;
-	setAttr ".rp" -type "double3" 0 -0.4023628582349667 -2.174805102865091e-16 ;
+	setAttr ".rp" -type "double3" 0 -0.4023628582349667 -2.1748051028650912e-16 ;
 	setAttr ".sp" -type "double3" 0 -0.026955835642066071 -1.4569855966209403e-17 ;
 	setAttr ".spt" -type "double3" 0 -0.37540702259290065 -2.029106543202997e-16 ;
 createNode mesh -n "ChairBackStrut0Shape" -p "ChairBackStrut1";
@@ -212,13 +212,13 @@ createNode mesh -n "ChairBackStrut0Shape" -p "ChairBackStrut1";
 		0 -0.0015523793 -0.022729855 0 -0.0015523793 -0.022729855 0 0.0015523793 -0.022729855 
 		0 0.0015523793 -0.022729855 0 -0.0018039296 -0.011832587 0 -0.0018039296 -0.011832587 
 		0 0.0018039296 -0.011832587 0 0.0018039296 -0.011832587 0;
-	setAttr -s 20 ".vt[0:19]"  -0.0053753923 -0.026955834 0.0044403095 0.0053753923 -0.026955834 0.0044403095
+	setAttr -s 20 ".vt[0:19]"  -0.0053753923 -0.026955836 0.0044403095 0.0053753923 -0.026955836 0.0044403095
 		 -0.0053753923 0.1155252 0.0044403095 0.0053753923 0.1155252 0.0044403095 -0.0053753923 0.1155252 -0.0044403095
-		 0.0053753923 0.1155252 -0.0044403095 -0.0053753923 -0.026955834 -0.0044403095 0.0053753923 -0.026955834 -0.0044403095
+		 0.0053753923 0.1155252 -0.0044403095 -0.0053753923 -0.026955836 -0.0044403095 0.0053753923 -0.026955836 -0.0044403095
 		 -0.0044494378 0.062299378 0.0036754305 -0.0044494378 0.062299378 -0.0036754305 0.0044494378 0.062299378 -0.0036754305
 		 0.0044494378 0.062299378 0.0036754305 -0.0044375691 0.030994818 0.003665626 -0.0044375691 0.030994818 -0.003665626
-		 0.0044375691 0.030994818 -0.003665626 0.0044375691 0.030994818 0.003665626 -0.0051566386 0.10295078 0.0042596092
-		 -0.0051566386 0.10295078 -0.0042596092 0.0051566386 0.10295078 -0.0042596092 0.0051566386 0.10295078 0.0042596092;
+		 0.0044375691 0.030994818 -0.003665626 0.0044375691 0.030994818 0.003665626 -0.0051566386 0.10295077 0.0042596092
+		 -0.0051566386 0.10295077 -0.0042596092 0.0051566386 0.10295077 -0.0042596092 0.0051566386 0.10295077 0.0042596092;
 	setAttr -s 36 ".ed[0:35]"  0 1 0 2 3 0 4 5 0 6 7 0 0 12 0 1 15 0 2 4 0
 		 3 5 0 4 17 0 5 18 0 6 0 0 7 1 0 8 16 0 9 13 0 8 9 1 10 14 0 9 10 1 11 19 0 10 11 1
 		 11 8 1 12 8 0 13 6 0 12 13 1 14 7 0 13 14 1 15 11 0 14 15 1 15 12 1 16 2 0 17 9 0
@@ -268,14 +268,14 @@ createNode transform -n "ChairBackStrut3" -p "Chair";
 	rename -uid "CE6B937E-4122-8582-3C04-9D8BBBFDCE1B";
 	setAttr ".t" -type "double3" 0.36729192940750038 1.9176097263194245 -1.1397850181839995 ;
 	setAttr ".s" -type "double3" 14.926744011120816 14.926744011120816 14.926744011120816 ;
-	setAttr ".rp" -type "double3" 0 -0.40236285823496704 -2.174805102865091e-16 ;
+	setAttr ".rp" -type "double3" 0 -0.40236285823496704 -2.1748051028650912e-16 ;
 	setAttr ".sp" -type "double3" 0 -0.026955835642066085 -1.4569855966209403e-17 ;
 	setAttr ".spt" -type "double3" 0 -0.37540702259290093 -2.029106543202997e-16 ;
 createNode transform -n "ChairBackStrut2" -p "Chair";
 	rename -uid "08B62DD8-42C5-4813-077B-FC9BA831ABAB";
 	setAttr ".t" -type "double3" 0 1.9176097263194247 -1.1397850181839995 ;
 	setAttr ".s" -type "double3" 14.926744011120816 14.926744011120816 14.926744011120816 ;
-	setAttr ".rp" -type "double3" 0 -0.40236285823496726 -2.174805102865091e-16 ;
+	setAttr ".rp" -type "double3" 0 -0.40236285823496726 -2.1748051028650912e-16 ;
 	setAttr ".sp" -type "double3" 0 -0.026955835642066099 -1.4569855966209403e-17 ;
 	setAttr ".spt" -type "double3" 0 -0.37540702259290115 -2.029106543202997e-16 ;
 createNode transform -n "ChairTop" -p "Chair";
@@ -318,12 +318,12 @@ createNode mesh -n "ChairTopShape" -p "ChairTop";
 		 -0.90892357 3.68898702 -1.099446893 0.90892357 3.68898702 -1.099446893 -0.90892357 3.68898702 -1.28544676
 		 0.90892357 3.68898702 -1.28544676 -0.90892357 3.4654026 -1.28544676 0.90892357 3.4654026 -1.28544676
 		 0.64923114 3.66776657 -1.099446893 0.64923114 3.66776657 -1.28544676 0.64923114 3.4654026 -1.28544676
-		 0.64923114 3.4654026 -1.099446893 0.38953868 3.69425941 -1.099446893 0.38953868 3.69425941 -1.28544676
-		 0.38953868 3.4654026 -1.28544676 0.38953868 3.4654026 -1.099446893 0.12984623 3.72990108 -1.099446893
+		 0.64923114 3.4654026 -1.099446893 0.38953871 3.69425941 -1.099446893 0.38953871 3.69425941 -1.28544676
+		 0.38953871 3.4654026 -1.28544676 0.38953871 3.4654026 -1.099446893 0.12984623 3.72990108 -1.099446893
 		 0.12984623 3.72990108 -1.28544676 0.12984623 3.4654026 -1.28544676 0.12984623 3.4654026 -1.099446893
 		 -0.12984623 3.72990108 -1.099446893 -0.12984623 3.72990108 -1.28544676 -0.12984623 3.4654026 -1.28544676
-		 -0.12984623 3.4654026 -1.099446893 -0.38953871 3.69425941 -1.099446893 -0.38953871 3.69425941 -1.28544676
-		 -0.38953871 3.4654026 -1.28544676 -0.38953871 3.4654026 -1.099446893 -0.64923114 3.66776657 -1.099446893
+		 -0.12984623 3.4654026 -1.099446893 -0.38953874 3.69425941 -1.099446893 -0.38953874 3.69425941 -1.28544676
+		 -0.38953874 3.4654026 -1.28544676 -0.38953874 3.4654026 -1.099446893 -0.64923114 3.66776657 -1.099446893
 		 -0.64923114 3.66776657 -1.28544676 -0.64923114 3.4654026 -1.28544676 -0.64923114 3.4654026 -1.099446893;
 	setAttr -s 60 ".ed[0:59]"  0 31 0 2 28 0 4 29 0 6 30 0 0 2 0 1 3 0 2 4 0
 		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0 8 3 0 9 5 0 8 9 1 10 7 0 9 10 1 11 1 0 10 11 1 11 8 1
@@ -400,14 +400,14 @@ createNode transform -n "ChairBackStrut0" -p "Chair";
 	rename -uid "515E9FE8-4755-7704-701E-E4BC85F5954C";
 	setAttr ".t" -type "double3" -0.73458385881500077 1.9176097263194249 -1.1397850181839995 ;
 	setAttr ".s" -type "double3" 14.926744011120816 14.926744011120816 14.926744011120816 ;
-	setAttr ".rp" -type "double3" 0 -0.4023628582349667 -2.174805102865091e-16 ;
+	setAttr ".rp" -type "double3" 0 -0.4023628582349667 -2.1748051028650912e-16 ;
 	setAttr ".sp" -type "double3" 0 -0.026955835642066071 -1.4569855966209403e-17 ;
 	setAttr ".spt" -type "double3" 0 -0.37540702259290065 -2.029106543202997e-16 ;
 createNode transform -n "ChairBackStrut4" -p "Chair";
 	rename -uid "F151C79F-4876-ADE3-3CFD-909E4DCD4865";
 	setAttr ".t" -type "double3" 0.73458385881500077 1.9176097263194245 -1.1397850181839995 ;
 	setAttr ".s" -type "double3" 14.926744011120816 14.926744011120816 14.926744011120816 ;
-	setAttr ".rp" -type "double3" 0 -0.40236285823496704 -2.174805102865091e-16 ;
+	setAttr ".rp" -type "double3" 0 -0.40236285823496704 -2.1748051028650912e-16 ;
 	setAttr ".sp" -type "double3" 0 -0.026955835642066085 -1.4569855966209403e-17 ;
 	setAttr ".spt" -type "double3" 0 -0.37540702259290093 -2.029106543202997e-16 ;
 createNode transform -n "Leg2" -p "Chair";
@@ -482,16 +482,16 @@ createNode mesh -n "LegShape" -p "Leg2";
 	setAttr ".pt[33]" -type "float3" -0.0039932346 0.12442019 -0.0039932346 ;
 	setAttr -s 34 ".vt[0:33]"  0.023199039 -0.07483498 -0.023199039 0 -0.07483498 -0.032808393
 		 -0.023199039 -0.07483498 -0.023199039 -0.032808393 -0.07483498 0 -0.023199039 -0.07483498 0.023199039
-		 0 -0.07483498 0.032808397 0.02319904 -0.07483498 0.02319904 0.032808401 -0.07483498 0
+		 0 -0.07483498 0.032808397 0.023199039 -0.07483498 0.023199039 0.032808404 -0.07483498 0
 		 0.023199039 0.59154081 -0.023199039 5.1545925e-17 0.59154081 -0.032808393 -0.023199039 0.59154081 -0.023199039
 		 -0.032808393 0.59154081 -9.7776653e-10 -0.023199039 0.59154081 0.023199039 5.1545925e-17 0.59154081 0.032808393
-		 0.02319904 0.59154081 0.023199039 0.032808401 0.59154081 -9.7776653e-10 0 -0.07483498 0
+		 0.023199039 0.59154081 0.023199039 0.032808404 0.59154081 -9.7776653e-10 0 -0.07483498 0
 		 9.7776653e-10 0.59154081 -9.7776653e-10 -1.4651826e-09 -0.019318178 0.050972827 -0.036043234 -0.019318178 0.03604323
 		 -0.050972827 -0.019318178 -9.2033625e-10 -0.036043234 -0.019318178 -0.03604323 -1.4651826e-09 -0.019318178 -0.050972827
 		 0.03604323 -0.019318178 -0.03604323 0.050972827 -0.019318178 -9.2033625e-10 0.036043234 -0.019318178 0.036043234
-		 -1.7395202e-10 0.51901734 -0.034964945 0.024723951 0.51901734 -0.024723951 0.034964949 0.51901734 -9.709481e-10
-		 0.024723953 0.51901734 0.024723953 -1.7395202e-10 0.51901734 0.034964945 -0.024723953 0.51901734 0.024723951
-		 -0.034964945 0.51901734 -9.709481e-10 -0.024723953 0.51901734 -0.024723951;
+		 -1.7395202e-10 0.51901734 -0.034964945 0.024723953 0.51901734 -0.024723953 0.034964949 0.51901734 -9.709481e-10
+		 0.024723954 0.51901734 0.024723954 -1.7395202e-10 0.51901734 0.034964945 -0.024723954 0.51901734 0.024723953
+		 -0.034964945 0.51901734 -9.709481e-10 -0.024723954 0.51901734 -0.024723953;
 	setAttr -s 72 ".ed[0:71]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
 		 7 0 0 8 9 0 9 10 0 10 11 0 11 12 0 12 13 0 13 14 0 14 15 0 15 8 0 0 23 0 1 22 0 2 21 0
 		 3 20 0 4 19 0 5 18 0 6 25 0 7 24 0 16 0 1 16 1 1 16 2 1 16 3 1 16 4 1 16 5 1 16 6 1
@@ -617,20 +617,20 @@ parent -s -nc -r -add "|Chair|Leg2|LegShape" "Leg" ;
 parent -s -nc -r -add "|Chair|Leg2|LegShape" "Leg3" ;
 parent -s -nc -r -add "|Chair|Leg2|LegShape" "Leg4" ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AE62DD52-4632-458E-01CB-11B34351DCDB";
+	rename -uid "E82B172E-4627-9EBE-A07D-0B94541562AA";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8AD2D35A-44BD-19E3-A0FF-6086790A2B0A";
+	rename -uid "F8B275F7-4553-8D33-EF67-73AB33C70A31";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F0CFF558-4C20-775A-C1A1-AF8192064E12";
+	rename -uid "0700FDAB-4DE5-C187-C133-94BA6C436C8F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7215C10B-41F9-BFF1-2B7B-A39F7246523A";
+	rename -uid "56C5FA3A-443C-6DD7-B426-03BE5FAE89AF";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9C64119D-45B2-AC7F-F7D2-31B06359EAA3";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "EFDD3DE1-4D4F-F347-9C19-96BB53FECAF3";
+	rename -uid "0BC829A8-4360-1F80-F671-FAA99D0F76CF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "21706B8F-49FD-2988-0574-9E8868F4DE25";
 	setAttr ".g" yes;
@@ -661,7 +661,7 @@ createNode script -n "uiConfigurationScriptNode";
 	rename -uid "5BD61E48-4786-6D27-1565-958BCC2AA5D0";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 337\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
@@ -751,8 +751,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
