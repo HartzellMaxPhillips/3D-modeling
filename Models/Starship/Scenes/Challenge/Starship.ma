@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Starship.ma
-//Last modified: Wed, Apr 03, 2024 11:52:01 PM
+//Last modified: Wed, Apr 03, 2024 11:51:01 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "650F1D0A-4BDF-29C6-C3D1-E9B603E91E29";
+fileInfo "UUID" "CB040E15-4133-42BD-91FC-909A0D249A06";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "631D5A39-431E-6440-0B4A-259415F8C609";
